@@ -5,6 +5,7 @@ BODY {
 }
 
 TABLE {
+	font-family: Verdana, Arial, Helvetica;
 	font-size: 9px;
 }
 A { 
@@ -228,7 +229,8 @@ TD.info-bottom {
 
 TABLE.news
 {
-	font-size: 10pt;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9pt;
 	line-height: 110%;
 	background-color: #FFFFFF;
 	border-top: 1px solid #FFF2BD; 

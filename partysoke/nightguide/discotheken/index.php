@@ -3,7 +3,7 @@
 /**
  * 
  *
- * @version $Id: index.php,v 1.1 2004/09/21 08:28:20 partysoke Exp $
+ * @version $Id: index.php,v 1.2 2004/09/22 07:10:44 partysoke Exp $
  * @copyright 2004 
  **/
 

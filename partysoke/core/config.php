@@ -1,11 +1,12 @@
 <?php
 
-$dbhost="db.berlios.de";
-$dbuser="psoke";
-$dbpwd="TI83xt04";
-$dbname="psoke";
+$dbhost="localhost";
+$dbuser="marcus";
+$dbpwd="marcus";
+$dbname="partysoke";
 
 $table["events"] = "events";
+$table["location"] = "location";
 $table["navigation"] = "navigation";
 $table["news"] = "news";
 $table["news_comments"] = "news_comments";

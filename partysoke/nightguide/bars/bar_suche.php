@@ -14,8 +14,11 @@
 				Suchen nach:<BR><input class="text" type="text" value="<?=$search_term; ?>" name="search_term" size="12">
 				<input class="button" type="submit" value="Suche" name="btn_submit"><BR>
 				<input type="checkbox" value="Login" checked name="search_option"> Name<BR>
-				<input type="checkbox" value="Login" name="search_option"> Beschreibung<BR>&nbsp;<BR>
-				Ausf&uuml;hrliche Suche<BR>&nbsp;			
+				<input type="checkbox" value="Login" name="search_option"> Beschreibung<BR>&nbsp;
+				<BR>
+				<div align="center">
+				Ausf&uuml;hrliche Suche
+				</div>			
 				</form>								
 								</td>
 							</tr>

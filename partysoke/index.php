@@ -12,10 +12,6 @@ db_open();
 <link rel="stylesheet" type="text/css" href="themes/<? echo $theme; ?>/style.css">
 </head>
 <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
-		<script language="javascript" type="text/javascript">
-			window.focus();
-			document.portal.loginFORM.user.focus();
-		</script>
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
 	<tr>
 		<td width="165" valign="top">
@@ -96,10 +92,10 @@ echo "
 } else {
 echo "
 <div style=\"line-height:150%\">
-&#9642;&nbsp;<a href=\"index.php?p=members|messenger\">Community</a><BR>
-&#9642;&nbsp;<a href=\"#\">Persönliche Daten</a><BR>
-&#9642;&nbsp;<a href=\"#\">Einstellungen</a><BR>
-&#9642;&nbsp;<a href=\"index.php?p=members&a=logout\">Logout</a>
+<B>&#9642;</B>&nbsp;<a href=\"index.php?p=members|messenger\">Community</a><BR>
+<B>&#9642;</B>&nbsp;<a href=\"#\">Persönliche Daten</a><BR>
+<B>&#9642;</B>&nbsp;<a href=\"#\">Einstellungen</a><BR>
+<B>&#9642;</B>&nbsp;<a href=\"index.php?p=members&a=logout\">Logout</a>
 </div>";
 }
 ?>
