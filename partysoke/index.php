@@ -9,7 +9,8 @@ db_open();
 <html>
 <head>
 <title>PartySOKe.de ... Wissen was l&auml;uft!</title>
-<link rel="stylesheet" type="text/css" href="themes/<? echo $theme; ?>/style.css" title="Default">
+<link rel="stylesheet" type="text/css" href="themes/default/style.css" title="Default">
+<link rel="stylesheet" type="text/css" href="themes/orange/style.css" title="Orange">
 </head>
 <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
