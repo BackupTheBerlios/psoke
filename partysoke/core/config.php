@@ -1,17 +1,22 @@
 <?php
 
-$dbhost="db.berlios.de";
-$dbuser="psoke";
-$dbpwd="TI83xt04";
-$dbname="psoke";
+$dbhost="localhost";
+$dbuser="marcus";
+$dbpwd="marcus";
+$dbname="partysoke";
 
-$theme = "default"; //
-
+$table["events"] = "events";
 $table["navigation"] = "navigation";
 $table["news"] = "news";
 $table["news_comments"] = "news_comments";
 
-$cfg["rows_nems"] = "5";
-$cfg["rows_nems_comments"] = "5";
 
+
+$theme = "default"; // 
+
+
+$cfg["rows_news"] = "5";
+$cfg["rows_news_comments"] = "5";
+
+$weekday = array("Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag");
 ?>

@@ -11,7 +11,7 @@ $select =	"	SELECT
 				WHERE n.visible='y' AND n.id='$id_news'
 				GROUP BY n.id
 				ORDER BY n.date DESC
-				LIMIT $cfg[rows_nems]
+				LIMIT $cfg[rows_news]
 			";		
 $sql = mysql_query($select);
 while(list($news["id"],$news["date"],$news["title"],$news["content"],$news["source"],$news["link_target"],$news["link"],$picture["link"],$picture["align"],$picture["text"],$comments,$user) = mysql_fetch_row($sql)){

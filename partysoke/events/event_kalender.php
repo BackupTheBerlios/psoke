@@ -1,11 +1,18 @@
 			<table border="0" class="font-small" width="150" cellspacing="0" cellpadding="0">				
 				<tr>
-					<td width="130" class="navi-top-right">EVENT KALENDER</td>
-					<td width="20" class="navi-top-left" valign="top">&nbsp;
+					<td width="130" class="navi-top-right">
+						EVENT KALENDER
+					</td>
+					<td width="20" class="navi-top-left" valign="top">
+						&nbsp;
 					</td>
 				</tr>	
 				<tr>
-					<td colspan="2" class="info-middle" align="center">August</td>
+					<td colspan="2" class="info-middle" align="center">
+						<B><a href="">&laquo;</a></B>
+						&nbsp;August 2004&nbsp;
+						<B><a href="">&raquo;</a></B>
+					</td>
 				</tr>					
 				<tr>
 					<td class="info-bottom" align="center" colspan="2">

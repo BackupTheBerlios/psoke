@@ -1,5 +1,6 @@
-
 <?
+ob_start();
+session_start();
 include("core/config.php");
 include("core/functions.php");
 db_open();
@@ -11,6 +12,10 @@ db_open();
 <link rel="stylesheet" type="text/css" href="themes/<? echo $theme; ?>/style.css">
 </head>
 <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+		<script language="javascript" type="text/javascript">
+			window.focus();
+			document.portal.loginFORM.user.focus();
+		</script>
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
 	<tr>
 		<td width="165" valign="top">
@@ -77,20 +82,40 @@ while(list($sub_name,$link_name,$link) = mysql_fetch_row($sql))
 
 			<tr>
 				<td width="20" class="navi-bottom-left">&nbsp;</td>
-				<td class="navi-bottom-right"><form><BR>
-				Benutzername:<BR><input class="text" type="text" name="user" size="20"><BR>
+				<td class="navi-bottom-right">
+<?
+if (!isset($_SESSION["user"])) {
+echo "
+				<form method=\"POST\" name=\"loginFORM\"action=\"index.php?p=members&a=login\"><BR>
+				Benutzername:<BR><input class=\"text\" type=\"text\" name=\"user\" size=\"20\"><BR>
 				Passwort:
-				<BR><input class="text" type="text" name="user" size="12">
-				<input class="button" type="submit" value="Login" name="btn_submit"><BR>
-				<a href="">Neu registrieren?</a>
-				</form>
+				<BR><input class=\"text\" type=\"text\" name=\"pwd\" size=\"10\">
+				<input class=\"button\" type=\"submit\" value=\"Login\" name=\"btn_submit\"><BR>
+				<a href=\"\">Neu registrieren?</a>
+				</form>";
+} else {
+echo "
+<div style=\"line-height:150%\">
+&#9642;&nbsp;<a href=\"index.php?p=members|messenger\">Community</a><BR>
+&#9642;&nbsp;<a href=\"#\">Persönliche Daten</a><BR>
+&#9642;&nbsp;<a href=\"#\">Einstellungen</a><BR>
+&#9642;&nbsp;<a href=\"index.php?p=members&a=logout\">Logout</a>
+</div>";
+}
+?>
 				</td>
 			</tr> 
 			<tr>
 				<td>&nbsp;</td>
 				<td align="right">
-				<span class="navi-user"><a href="">NagathoR</a></span>
-				<!-- <a href="">NagathoR</a> -->
+				<?
+					if (isset($_SESSION["user"])) {
+					 echo "<span class=\"navi-user\"><a href=\"index.php?p=members|messenger\">$_SESSION[user]</a></span>";
+					} else {
+					 echo "<span class=\"navi-user\">Gast</span>";					
+					}
+				
+				?>
 				</td>
 			</tr> 											
 			</table>
@@ -134,7 +159,6 @@ while(list($sub_name,$link_name,$link) = mysql_fetch_row($sql))
 if ($page == "news") {
 	include("news/news_suche.php");
 	include("news/news_kalender.php");
-	
 }
 elseif ($page == "events") {
 	include("events/event_kalender.php");
@@ -151,6 +175,12 @@ elseif ($page == "events") {
 elseif ($page == "cinema") {
 	include("cinema/new/cinema_search.php");
 }
+elseif ($p[1] == "messenger") {
+	include("members/messenger.php");
+}
+elseif ($page == "nightguide" && $p[1] == "bars") {
+	include("nightguide/bars/bar_suche.php");
+}
 ?>
 					
 		</td>		
@@ -162,4 +192,5 @@ elseif ($page == "cinema") {
 </html>
 <?
 db_close();
+ob_flush();
 ?>

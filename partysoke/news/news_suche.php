@@ -4,8 +4,8 @@
 					<td width="130" class="navi-top-right">NEWS SUCHE</td>
 					<td width="20" class="navi-top-left" valign="top">&nbsp;
 					</td>
-				</tr>					
-				<tr>
+				</tr>									
+				<tr>			
 					<td class="info-bottom" align="center" colspan="2">
 						<table class="font-small" border="0" width="150" cellspacing="0" cellpadding="0">					
 							<tr>
@@ -18,7 +18,6 @@
 				</form>								
 								</td>
 							</tr>
-
 						</table>					
 					</td>
 				</tr>				

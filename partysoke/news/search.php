@@ -19,10 +19,7 @@ while(list($news["id"],$news["date"],$news["title"],$news["content"],$news["sour
 //$suchmuster = '(>[^<]*)('. quotemeta($search_term) .')';
 //$ersatz = '\\1<span class=\"highlight\">\\2</span>';
 // ! $news["content"] = eregi_replace($suchmuster, $ersatz, $news["content"]);
-$news["content"] = preg_replace("/\b$search_term\b/",  "<span class=\"highlight\">$search_term</span>", $news["content"]); 
-$search_term2 = $search_term;
-$search_term2[0] = strtoupper($search_term2[0]);
-$news["content"] = preg_replace("/\b$search_term2\b/",  "<span class=\"highlight\">$search_term2</span>", $news["content"]); 
+$news["content"] = preg_replace("/\b$search_term\b/i",  "<span class=\"highlight\">$search_term</span>", $news["content"]); 
 // ! $news["content"] = str_replace( "$search_term", "<span class=\"highlight\">$search_term</span>", $news["content"]);
 	echo 	"
 <table border=\"0\" width=\"100%\" cellspacing=\"5\" class=\"news\">

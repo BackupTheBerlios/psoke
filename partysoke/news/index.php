@@ -2,7 +2,7 @@
 //include("core/config.php");
 
 $select =	"	SELECT 
-					n.id, DATE_FORMAT(n.date,'%d.%m.%Y %H.%i') AS datum, n.title, n.content, n.source, 
+					n.id, DATE_FORMAT(n.date,'%d.%m.%Y %H.%i') AS datum, n.art, n.title, n.content, n.source, 
 					n.link_target, n.link, 
 					n.picture_link, n.picture_align, n.picture_text, 
 					COUNT(nc.id),
@@ -12,15 +12,19 @@ $select =	"	SELECT
 				WHERE n.visible='y'
 				GROUP BY n.id
 				ORDER BY n.date DESC
-				LIMIT $cfg[rows_nems]
-			";	
+				LIMIT $cfg[rows_news]";	
 
 $sql = mysql_query($select);
-while(list($news["id"],$news["date"],$news["title"],$news["content"],$news["source"],$news["link_target"],$news["link"],$picture["link"],$picture["align"],$picture["text"],$comments,$user) = mysql_fetch_row($sql)){
+while(list($news["id"],$news["date"],$news["art"],$news["title"],$news["content"],$news["source"],$news["link_target"],$news["link"],$picture["link"],$picture["align"],$picture["text"],$comments,$user) = mysql_fetch_row($sql)){
+	if ($news["art"] == "members") {
+		$news["art"] = "<img src=\"themes/$theme/icons/members.gif\" align=\"absmiddle\" border=\"0\">";
+	} else {
+		$news["art"] = "<img src=\"themes/$theme/icons/general.gif\" align=\"absmiddle\" border=\"0\">";	
+	}
 	echo 	"
 <table border=\"0\" width=\"100%\" cellspacing=\"5\" class=\"news\">
 	<tr>
-		<td width=\"75%\" valign=\"top\"><B>$news[title]</B>
+		<td width=\"75%\" valign=\"top\">$news[art]&nbsp;<B>$news[title]</B>
 		</td>
 		<td width=\"25%\" class=\"font-small\" align=\"right\" valign=\"top\">$news[date]
 		</td>

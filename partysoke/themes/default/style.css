@@ -3,7 +3,11 @@ BODY {
 	font-family: Verdana, Arial, Helvetica;
 	font-size: 10pt;
 }
-
+TABLE {
+	background-color: #F7FCFF;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10pt;
+}
 A { 
 	color: #000000; text-decoration: none;
 }
@@ -165,6 +169,7 @@ TD.navi-bottom-left {
 }
 
 TD.navi-bottom-right {
+	BACKGROUND-IMAGE: url('images/login_gradient.gif');
 	background-color: #D7EBF7;
 	border-top: 3px solid #B9D5E6;
 	border-left: 1px solid #B9D5E6; 
@@ -233,9 +238,6 @@ TABLE.news
 	border-left: 1px solid #85B6D3; 
 	border-right: 1px solid #85B6D3; 
 	border-bottom: 1px solid #85B6D3; 
-	padding-top: 4px;
-	padding-bottom: 15px;
-
 }
 
 .news .news-picture {
@@ -243,10 +245,6 @@ TABLE.news
 	border-left: 1px solid #85B6D3; 
 	border-right: 1px solid #85B6D3; 
 	border-bottom: 1px solid #85B6D3; 
-	padding-top: 1px;
-	padding-right: 1px;
-	padding-bottom: 1px;
-	padding-left: 1px;
 }
 
 
@@ -266,17 +264,20 @@ TD.today {
 
 
 .highlight {
+	font-size: 9px;
 	color: #000000;
-	background-color: #B9D5E6; 
+	background-color: #B9D5E6;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
 }
 
 .news-comments {
 	font-size: 9px;
 	align: right;
 	background-color: #B9D5E6; 
-	padding-top: 4px;
 	padding-right: 10px;
-	padding-bottom: 4px;
 	padding-left: 10px;
 }
 
@@ -286,4 +287,8 @@ TD.today {
 	border-left: 1px solid #85B6D3; 
 	border-right: 1px solid #85B6D3; 
 	border-bottom: 1px solid #85B6D3; 
+}
+
+.second {
+background-color: #ECF5FA;
 }
