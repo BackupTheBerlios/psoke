@@ -1,11 +1,11 @@
 <?php
 
-$dbhost="localhost";
-$dbuser="wwwrun";
-$dbpwd="wwwrun";
-$dbname="partysoke";
+$dbhost="db.berlios.de";
+$dbuser="psoke";
+$dbpwd="TI83xt04";
+$dbname="psoke";
 
-$theme = "xp"; // 
+$theme = "default"; //
 
 $table["navigation"] = "navigation";
 $table["news"] = "news";
